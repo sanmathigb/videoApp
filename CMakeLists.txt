@@ -7,5 +7,7 @@ list(APPEND EXTRA_LIBS
 )
 
 add_subdirectory(lib/glfw)
+add_subdirectory(lib/FFmpeg)
+
 add_executable(video-app src/main.cpp)
-target_link_libraries(video-app glfw ${EXTRA_LIBS})
+target_link_libraries(video-app FFmpeg glfw ${EXTRA_LIBS})
